@@ -1,5 +1,5 @@
 import numpy, time, pandas
-(p,q) = (1000, 1234567) # domain; database size.
+(p,q) = (4321, 1234567) # domain; database size.
 print("p,q = ", (p,q))
 r = numpy.random.randint
 t = [(r(0,p),r(0,p),r(0,p)) for i in range(q)]
@@ -25,7 +25,7 @@ for (x,y,z) in t:
 print(time.time()-s, "seconds for one interation.") 
 w = [(k,v) for k , v in ensi.items()]+[(k,v) for k,v in toka.items()]
 w.sort()
-print(1-sum([(v[i] != w[i]) for i in range(len(v))])/len(v), "similarity")
+print(1-sum([(v[i] != w[i]) for i in range(len(v))])/len(v), "FP v Iter similarity")
 s = time.time()
 t1 = pandas.DataFrame(t, columns=["x", "y", "z"])
 print(time.time()-s, "seconds for pandas")
@@ -34,6 +34,9 @@ mz = t1.groupby("x")["z"].nlargest(2)
 print(time.time()-s, "seconds for nlargest(2).") 
 w1 = [(x, t[y][1]) for (x,y) in mz.index]
 w1.sort() 
+print(1-sum([(v[i] != w1[i]) for i in range(len(v))])/len(v), "FP v Pd.nlargest() similarity")
+print(1-sum([(w1[i] != w[i]) for i in range(len(v))])/len(v), "Iter v Pd.Nlargest() similarity")
+
 print(1-sum([(v[i] != w1[i]) for i in range(len(v))])/len(v), "similarity")
 
 
