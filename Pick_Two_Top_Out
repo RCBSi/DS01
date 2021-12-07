@@ -1,36 +1,29 @@
 
-
 p,q =  (1000, 54321)
 0.017935752868652344 seconds for sorting, picking 2.
 0.03302502632141113 seconds for one interation.
 0.40349999999999997 similarity
 0.04973602294921875 seconds for pandas
 0.2509639263153076 seconds for nlargest(2).
-0.9815 similarity
 
 import numpy, time, pandas...
 p,q =  (1000, 654321)
 0.30460500717163086 seconds for sorting, picking 2.
 0.3726189136505127 seconds for one interation.
-0.49150000000000005 similarity
 0.48376011848449707 seconds for pandas
 0.3633279800415039 seconds for nlargest(2).
-0.7735 similarity
 
 (p,q) = (1000,1234567)
 import numpy, time, pandas...
 0.6929008960723877 seconds for sorting, picking 2.
 0.6291310787200928 seconds for one interation.
-0.5760000000000001 similarity
 0.93267822265625 seconds for pandas
 0.39597105979919434 seconds for nlargest(2).
-0.659 similarity
 
 p,q =  (1000, 1234567)
 49.502466917037964 seconds for partition
 0.701164722442627 seconds for sorting, picking 2.
 0.587888240814209 seconds for one interation.
-0.5760000000000001 similarity
 0.8174598217010498 seconds for pandas
 0.5143890380859375 seconds for nlargest(2).
 
@@ -38,8 +31,7 @@ p,q =  (54321, 12345678)
 21.145939111709595 seconds for one interation.
 8.337849140167236 seconds for pandas
 20.354658126831055 seconds for nlargest(2).
-0.37295889250934267 similarity
-0.624 similarity
+
 
 p,q =  (54321, 12345678)
 17.598445892333984 seconds for one interation.
@@ -50,5 +42,10 @@ p,q =  (123456, 12345678)
 21.754090070724487 seconds for one interation.
 8.869738101959229 seconds for pandas
 59.48898696899414 seconds for nlargest(2).
-0.37504455028512185 similarity
 
+import numpy, time, pandas...
+p,q =  (123456, 12345678)
+21.89417290687561 seconds for one interation.
+8.481934070587158 seconds for pandas
+57.16701698303223 seconds for nlargest(2).
+1.0 similarity
