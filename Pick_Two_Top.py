@@ -33,6 +33,7 @@ s = time.time()
 mz = t1.groupby("x")["z"].nlargest(2)
 print(time.time()-s, "seconds for nlargest(2).") 
 w1 = [(x, t[y][1]) for (x,y) in mz.index]
+w1.sort() 
 print(1-sum([(v[i] != w1[i]) for i in range(len(v))])/len(v), "similarity")
 
 
