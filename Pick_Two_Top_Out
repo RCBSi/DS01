@@ -21,6 +21,17 @@ import numpy, time, pandas...
 0.39597105979919434 seconds for nlargest(2).
 
 p,q =  (1000, 1234567)
+63.08885979652405 seconds for partition
+0.6554031372070312 seconds for sorting, picking 2.
+0.7190988063812256 seconds for one interation.
+0.815 similarity
+0.9103090763092041 seconds for pandas
+0.39392900466918945 seconds for nlargest(2).
+0.815 similarity
+print(1-sum([(w1[i] != w[i]) for i in range(len(v))])/len(v), "similarity")
+1.0 similarity
+
+p,q =  (1000, 1234567)
 49.502466917037964 seconds for partition
 0.701164722442627 seconds for sorting, picking 2.
 0.587888240814209 seconds for one interation.
@@ -31,7 +42,6 @@ p,q =  (54321, 12345678)
 21.145939111709595 seconds for one interation.
 8.337849140167236 seconds for pandas
 20.354658126831055 seconds for nlargest(2).
-
 
 p,q =  (54321, 12345678)
 17.598445892333984 seconds for one interation.
