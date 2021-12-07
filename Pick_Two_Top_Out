@@ -38,6 +38,16 @@ p,q =  (1000, 1234567)
 0.8174598217010498 seconds for pandas
 0.5143890380859375 seconds for nlargest(2).
 
+p,q =  (4321, 1234567) 
+362.43631982803345 seconds for partition  # the FP solution in the next row is very fast, but it requires this partition. Surely this can speed up.
+0.5822477340698242 seconds for sorting, picking 2.
+1.004913091659546 seconds for one interation.
+0.5105299699143717 FP v Iter similarity # maybe something is wrong with the FP picker. One would expect more similarity with more unique y values.
+1.0473191738128662 seconds for pandas
+1.6448638439178467 seconds for nlargest(2).
+0.5105299699143717 FP v Pd.nlargest() similarity
+1.0 Iter v Pd.Nlargest() similarity
+
 p,q =  (54321, 12345678)
 21.145939111709595 seconds for one interation.
 8.337849140167236 seconds for pandas
