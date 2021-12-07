@@ -33,6 +33,12 @@ p,q =  (1000, 1234567)
 0.5760000000000001 similarity
 0.8174598217010498 seconds for pandas
 0.5143890380859375 seconds for nlargest(2).
+
+p,q =  (54321, 12345678)
+21.145939111709595 seconds for one interation.
+8.337849140167236 seconds for pandas
+20.354658126831055 seconds for nlargest(2).
+0.37295889250934267 similarity
 0.624 similarity
 
 p,q =  (54321, 12345678)
