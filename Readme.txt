@@ -29,6 +29,24 @@ The two values of y must be different.
 The length of the output is about 2p tuples, and it is shorter exactly in the case that some value of x was not randomly created at least 
 twice. 
 
+If we look also at the z values for the rows that are chosen, we will notice that they are all near p:
 
 
+[t[y] for (x,y) in mz.index[14234:14248]]
 
+[(7117, 122775, 123133),
+ (7117, 59412, 121499),
+ (7118, 83771, 122861),
+ (7118, 68750, 122261),
+ (7119, 90341, 122813),
+ (7119, 97641, 120786),
+ (7120, 39384, 123436),
+ (7120, 75910, 122322),
+ (7121, 28462, 123278),
+ (7121, 19352, 121052),
+ (7122, 118341, 123316),
+ (7122, 67250, 123232),
+ (7123, 12600, 122557),
+ (7123, 52992, 121454)]
+
+Note that the index 14234//2 == 7117, i.e. mz has exactly two rows for each x value. 
