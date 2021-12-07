@@ -33,26 +33,15 @@ w1 = [(x, t[y][1]) for (x,y) in mz.index]
 print(1-sum([(v[i] != w1[i]) for i in range(len(v))])/len(v), "similarity")
 
 
-import numpy, time, pandas...
-7.700920104980469e-05 seconds for partition
-0.03392481803894043 seconds for sorting, picking 2.
-0.05485224723815918 seconds for one interation.
-0.4235 similarity
-0.08565282821655273 seconds for pandas
-0.26352810859680176 seconds for nlargest(2).
-0.9635 similarity
 
-
-(p,q) = (1000,1234567)
-import numpy, time, pandas...
-5.1021575927734375e-05 seconds for partition
-0.6929008960723877 seconds for sorting, picking 2.
-0.6291310787200928 seconds for one interation.
-0.5760000000000001 similarity
-0.93267822265625 seconds for pandas
-0.39597105979919434 seconds for nlargest(2).
-0.659 similarity
-
+p,q =  (1000, 54321)
+9.202957153320312e-05 seconds for partition
+0.017935752868652344 seconds for sorting, picking 2.
+0.03302502632141113 seconds for one interation.
+0.40349999999999997 similarity
+0.04973602294921875 seconds for pandas
+0.2509639263153076 seconds for nlargest(2).
+0.9815 similarity
 
 import numpy, time, pandas...
 p,q =  (1000, 654321)
@@ -64,12 +53,14 @@ p,q =  (1000, 654321)
 0.3633279800415039 seconds for nlargest(2).
 0.7735 similarity
 
-p,q =  (1000, 54321)
-9.202957153320312e-05 seconds for partition
-0.017935752868652344 seconds for sorting, picking 2.
-0.03302502632141113 seconds for one interation.
-0.40349999999999997 similarity
-0.04973602294921875 seconds for pandas
-0.2509639263153076 seconds for nlargest(2).
-0.9815 similarity
+(p,q) = (1000,1234567)
+import numpy, time, pandas...
+5.1021575927734375e-05 seconds for partition
+0.6929008960723877 seconds for sorting, picking 2.
+0.6291310787200928 seconds for one interation.
+0.5760000000000001 similarity
+0.93267822265625 seconds for pandas
+0.39597105979919434 seconds for nlargest(2).
+0.659 similarity
+
 
