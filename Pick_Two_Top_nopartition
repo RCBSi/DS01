@@ -1,9 +1,7 @@
 import numpy, time, pandas
-(p,q) = (1000, 12345678) # domain; database size.
+(p,q) = (54321, 12345678) # domain; database size.
 print("p,q = ", (p,q))
-#(p,q) = (3,5)
 r = numpy.random.randint
-#t = [(r(0,p),[r(0,p),r(0,p)) for i in range(q/p)]for j in range(p)]
 t = [(r(0,p),r(0,p),r(0,p)) for i in range(q)]
 s = time.time()
 [ensi, ensi_arvo, toka, toka_arvo] = [{},{},{},{}]
@@ -17,7 +15,6 @@ for (x,y,z) in t:
 print(time.time()-s, "seconds for one interation.") 
 w = [(k,v) for k , v in ensi.items()]+[(k,v) for k,v in toka.items()]
 w.sort()
-print(1-sum([(v[i] != w[i]) for i in range(len(v))])/len(v), "similarity")
 s = time.time()
 t1 = pandas.DataFrame(t, columns=["x", "y", "z"])
 print(time.time()-s, "seconds for pandas")
@@ -25,4 +22,4 @@ s = time.time()
 mz = t1.groupby("x")["z"].nlargest(2)
 print(time.time()-s, "seconds for nlargest(2).") 
 w1 = [(x, t[y][1]) for (x,y) in mz.index]
-print(1-sum([(v[i] != w1[i]) for i in range(len(v))])/len(v), "similarity")
+print(1-sum([(w[i] != w1[i]) for i in range(len(w))])/len(w), "similarity")
