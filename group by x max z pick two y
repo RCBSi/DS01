@@ -1,8 +1,7 @@
 import numpy, time, pandas
-(p,q) = (1000,99999) # domain; database size.
-#(p,q) = (3,5)
+(p,q) = (1000,654321) # domain; database size.
+print("p,q = ", (p,q))
 r = numpy.random.randint
-#t = [(r(0,p),[r(0,p),r(0,p)) for i in range(q/p)]for j in range(p)]
 t = [(r(0,p),r(0,p),r(0,p)) for i in range(q)]
 s = time.time()
 print(time.time()-s, "seconds for partition")
@@ -42,3 +41,35 @@ import numpy, time, pandas...
 0.08565282821655273 seconds for pandas
 0.26352810859680176 seconds for nlargest(2).
 0.9635 similarity
+
+
+(p,q) = (1000,1234567)
+import numpy, time, pandas...
+5.1021575927734375e-05 seconds for partition
+0.6929008960723877 seconds for sorting, picking 2.
+0.6291310787200928 seconds for one interation.
+0.5760000000000001 similarity
+0.93267822265625 seconds for pandas
+0.39597105979919434 seconds for nlargest(2).
+0.659 similarity
+
+
+import numpy, time, pandas...
+p,q =  (1000, 654321)
+5.3882598876953125e-05 seconds for partition
+0.30460500717163086 seconds for sorting, picking 2.
+0.3726189136505127 seconds for one interation.
+0.49150000000000005 similarity
+0.48376011848449707 seconds for pandas
+0.3633279800415039 seconds for nlargest(2).
+0.7735 similarity
+
+p,q =  (1000, 54321)
+9.202957153320312e-05 seconds for partition
+0.017935752868652344 seconds for sorting, picking 2.
+0.03302502632141113 seconds for one interation.
+0.40349999999999997 similarity
+0.04973602294921875 seconds for pandas
+0.2509639263153076 seconds for nlargest(2).
+0.9815 similarity
+
